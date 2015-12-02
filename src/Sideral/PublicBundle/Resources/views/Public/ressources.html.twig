@@ -1,0 +1,124 @@
+{% extends "SideralPublicBundle::layout.html.twig" %}
+
+{% block title %} Règles - Ressources - {{ parent() }} {% endblock %}
+
+{% block content %}
+
+
+{% for flashMessage in app.session.flashbag.get('notice')%}
+    <div>{{flashMessage}}</div>
+{% endfor %}
+
+
+    <article class="page_ressource">
+
+        <h1>Les ressources</h1>
+		<p>Afin de pouvoir comptabiliser simplement ses ressources et pouvoir comparer les réserves entre elles, la quantité de chaque ressource disponible est indexée selon un nombre de 0 à 100 (en pourcentage ou en nombre).</p>
+
+		<table id="tab_ressources">
+			<caption>Les différentes ressources</caption>
+			<thead>
+				<tr><th>Icône</th><th>Nom</th><th>Description</th><th>Départ</th><th>Source</th></tr>
+			</thead>
+			<tfoot>
+				<tr><th>Icône</th><th>Nom</th><th>Description</th><th>Départ</th><th>Source</th></tr>
+			</tfoot>
+			<tbody>
+                <tr>
+                    <td><i class="fa fa-users"></i></td>
+                    <td>Population </td>
+                    <td>
+                        Il s'agit de l'âme du vaisseau.
+                        <div class="formule">Consommation par tour :<br> <i class="fa fa-cubes"></i> x 1 pour <i class="fa fa-users"></i> x 10  </div>
+                            Si la population descend en-dessous de 5, l’astronef entre en décrépitude : le moral baisse rapidement.
+                            <div class="formule">
+                                Si décrépitude :<br>
+                                -10% <i class="fa fa-beer fa-flip-horizontal"></i> par tour
+                            </div>
+                    </td>
+                    <td>40 pers.</td>
+                    <td>
+                        - Nouveau membre d'équipage opérationnel (naissance + éducation).
+                        <div class="formule">Renforcement de l'équipage :<br>
+                           +5%<i class="fa fa-users"></i> par tour <br>(chance de 20%, minimum 1)
+                        </div>
+                        - Sabordage de vaisseaux ennemis. </td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-beer fa-flip-horizontal"></i></td>
+                    <td>Moral</td>
+                    <td>S’il atteint 0%, la révolte gronde au point que l’équipage se mutine. <br>
+                        Une défaite militaire ou la sous-nutrition occasionnent de fortes baisses de moral.</td>
+                    <td>50%</td>
+                    <td>Planètes, bar, religion, éducation, médecin, repos.</td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-plus-square"></i></td>
+                    <td>Nourriture (rations)</td>
+                    <td>
+                        La famine se déclare si les rations sont insuffisantes (par exemple seulement une pour 20 personne).
+                    <div class="formule">Si famine :<br> baisse de moral constante (-5% <i class="fa fa-beer fa-flip-horizontal"></i>) <br>
+                        et baisse croissante de population (0 – 2 – 6 – 14 – 30 -62 – aucun survivant)
+                    </div>
+                    </td>
+                    <td>20 <br>
+                    (réserve pour 5 tours pour 40 pers.)
+                    </td>
+                    <td>Planètes, abordage éclair.<br>
+                        On peut fabriquer de la nourriture à faible taux (les personnes y travaillant sont simplement auto-suffisantes) dans la serre artificielle.</td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-cogs"></i><!--<i class="fa fa-space-shuttle">--></i></td>
+                    <td>Structure</td>
+                    <td>Caractérise l'état de la coque et des machines.</td>
+                    <td>90% <br>(intacte)</td>
+                    <td>
+                        - Affectation de personnel au travaux de réfection.
+                        <div class="formule">Réparation :<br><i class="fa fa-users"></i> x 1 + <i class="fa fa-cubes"></i> x 1 = +2% <i class="fa fa-cogs"></i></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-bolt"></i></td>
+                    <td>Carburant</td>
+                    <td>Il faut 5 unités de carburant pour faire un saut. </td>
+                    <td>50 <br>(10 bonds)
+                    </td>
+                    <td>Astéroïdes, abordage éclair.<br>
+                        0n peut affecter quelques personnes (5 max) pour affiner le carburant, ce qui permet d’augmenter légèrement les stocks (de 0,5 par personne, sous réserve d’avoir en stock au moins 5 unités).
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-cubes"></i></td>
+                    <td>Matériaux</td>
+                    <td>Permet de réparer un vaisseau.</td>
+                    <td>20
+                    </td>
+                    <td>Planètes, sabordage.<br>
+                    On peut améliorer la qualité des matériaux (de 0,5 par personne) en affectant du personnel au recyclage ou au traitement de matières brutes, ce qui permet d’augmenter légèrement les stocks (de 0,5 par personne, sous réserve d’avoir en stock au moins 5 unités). </td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-rocket"></i></td>
+                    <td>Munitions </td>
+                    <td></td>
+                    <td>60</td>
+                    <td>Abordage éclair.
+                        <div class="formule">Fabrication :<br><i class="fa fa-cubes"></i> x 1 + <i class="fa fa-bolt"></i> x 1 = <i class="fa fa-rocket"></i> x 5</div>
+                    </td>
+                </tr>
+
+			</tbody>
+		</table>
+        <p>Les rations, le carburant, les matériaux et les munitions peuvent également s’obtenir par le commerce.</p>
+    </article>
+<i class="fa fa-cog fa-spin"></i>
+
+{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ asset('bundles/sideralpublic/css/design.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('bundles/sideralpublic/css/font-awesome-4.5.0/css/font-awesome.min.css') }}" />
+<link rel="stylesheet" type="text/javascript" href="{{ asset('bundles/sideralpublic/js/jquery/jquery.js') }}" />
+
+{% endblock %}
+
+

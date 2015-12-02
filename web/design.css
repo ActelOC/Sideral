@@ -1,0 +1,89 @@
+/*
+Theme Name: Twenty Fourteen
+Theme URI: https://wordpress.org/themes/twentyfourteen/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: In 2014, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier.
+Version: 1.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: twentyfourteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Reset
+ * 2.0 - Repeatable Patterns
+ * 3.0 - Basic Structure
+ * 4.0 - Header
+ * 5.0 - Navigation
+ * 6.0 - Content
+ *   6.1 - Post Thumbnail
+ *   6.2 - Entry Header
+ *   6.3 - Entry Meta
+ *   6.4 - Entry Content
+ *   6.5 - Galleries
+ *   6.6 - Post Formats
+ *   6.7 - Post/Image/Paging Navigation
+ *   6.8 - Attachments
+ *   6.9 - Archives
+ *   6.10 - Contributor Page
+ *   6.11 - 404 Page
+ *   6.12 - Full-width
+ *   6.13 - Singular
+ *   6.14 - Comments
+ * 7.0 - Sidebar
+ *   7.1 - Widgets
+ *   7.2 - Content Sidebar Widgets
+ * 8.0 - Footer
+ * 9.0 - Featured Content
+ * 10.0 - Multisite
+ * 11.0 - Media Queries
+ * 12.0 - Print
+ * 13.0 - Fond d'écran
+ * 14.0 - 
+ * -----------------------------------------------------------------------------
+ */
+
+
+/**
+ * 1.0 Reset
+ *
+ * Resetting and rebuilding styles have been helped along thanks to the fine
+ * work of Eric Meyer, Nicolas Gallagher, Jonathan Neal, and Blueprint.
+ *
+ * -----------------------------------------------------------------------------
+ */
+
+body { color: white; font-size: 16px; font-family: sans-serif; margin: 0; padding: 0; background: black }
+h1 { margin: 0px 0px 1em 0px; color: #076d6f; font-size: 1.7em; }
+h3 { margin: 0px 0px 1.5em 0px; color: #339999; font-size: 1.1em; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
+a { color: #00a2ff; text-decoration: none; }
+
+header { height: 250px; background: #eee url(banner.jpg) no-repeat center; background-size: cover; margin-bottom: 50px; position: relative; }
+header a.logo { position: absolute; display: block; width: 154px; height: 57px; background: url(logo.png) no-repeat 0 0; background-size: contain; z-index: 1; top: 15px; left: 20px; }
+header a.logo span { display: none; }
+
+article { width: 70%; float: left; margin-bottom: 75px; }
+article div { padding: 0px 40px 0px 40px; border-right: 1px solid #555; }
+aside { width: 30%; float: left; }
+aside div { padding: 0px 40px 0px 40px; }
+
+nav { background-color: rgba(0,0,0,.6); position: relative; padding: 45px 0px 0px 180px; }
+
+/* Add menu rules here */
+
+
+@media screen and (max-width: 750px) {
+	
+	header a.logo { width: 120px; height: 44px; }
+	article { width: 100%; float: none; margin-bottom: 40px; }
+	article div { margin: 0px 40px; padding: 0px 0px 30px 0px; border-right: none; border-bottom: 1px solid #555; }
+	aside { width: 100%; float: none; }
+
+}

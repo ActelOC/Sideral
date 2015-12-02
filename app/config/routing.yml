@@ -1,0 +1,5 @@
+sideral_public:
+    resource: "@SideralPublicBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

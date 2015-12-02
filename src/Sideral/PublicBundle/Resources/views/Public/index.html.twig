@@ -1,0 +1,14 @@
+{% extends "SideralPublicBundle::layout.html.twig" %}
+
+{% block title %} Accueil - {{ parent() }} {% endblock %}
+
+{% block content %}
+
+		<h1>Bienvenue sur l'<strong>Exil Sidéral !</strong></h1>
+
+		<p class="p_oblique_1">Dans ce jeu de survie dans l’espace, vous vous retrouverez à la tête d’un <em>vaisseau spatial esseulé dans le vide cosmique</em>. <br> Votre rôle sera de <em>mener son équipage</em> à un sort plus enviable que ce qu’a subi la majeure partie de l’humanité, dont il ne reste que quelques rescapés, dispersés dans une poignée d’astronefs isolés...</p>
+<img src="{{asset('bundles/sideralpublic/images/erebus.jpg')}}"/>
+<link rel="stylesheet" type="text/css" href="{{ asset('bundles/sideralpublic/css/public.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('bundles/sideralpublic/css/font-awesome-4.5.0/css/font-awesome.min.css') }}" />
+<link rel="stylesheet" type="text/javascript" href="{{ asset('bundles/sideralpublic/js/jquery/jquery.js') }}" />
+{% endblock %}

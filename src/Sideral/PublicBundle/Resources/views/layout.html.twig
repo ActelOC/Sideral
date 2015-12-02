@@ -1,0 +1,38 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+
+	{{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/sideralpublic/css/public.css') }}" />
+
+{% endblock %}
+
+{% block body %}
+
+	{% block header %}
+	<header>
+	        <nav>
+	            <ul>
+	                <li><a href="{{ path('sideral_public_public_index') }}">Accueil</a></li>
+	                <li><a href="{{ path('sideral_public_public_ressources') }}">Manuel du commandant</a></li>
+	            </ul>
+	        </nav>
+	</header>
+	{% endblock %}
+
+
+	{% block content %}
+
+	{% endblock %}
+
+
+	{% block footer %}
+	<footer>
+	    <p>Tout droit reservé au nom de Henri Pissa</p>
+	    {% block footer_user %}
+	    {% endblock %}
+	</footer>
+	{% endblock %}
+
+
+{% endblock %}

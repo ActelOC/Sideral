@@ -1,0 +1,197 @@
+/* line 4, ../scss/public.scss */
+.page_ressource {
+  width: 850px;
+  background: black;
+  padding: 20px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.9);
+}
+/* line 9, ../scss/public.scss */
+.page_ressource h1 {
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+/* line 15, ../scss/public.scss */
+table#tab_ressources {
+  margin: 20px 0 20px 0;
+}
+/* line 17, ../scss/public.scss */
+table#tab_ressources caption {
+  font-style: italic;
+  font-size: 1.5em;
+}
+/* line 22, ../scss/public.scss */
+table#tab_ressources td, table#tab_ressources th {
+  border: 1px solid white;
+  padding: 3px 18px;
+}
+/* line 26, ../scss/public.scss */
+table#tab_ressources th {
+  font-style: italic;
+}
+/* line 29, ../scss/public.scss */
+table#tab_ressources td {
+  vertical-align: middle;
+}
+/* line 32, ../scss/public.scss */
+table#tab_ressources th:nth-child(1) {
+  width: 35px;
+}
+/* line 35, ../scss/public.scss */
+table#tab_ressources th:nth-child(2) {
+  width: 75px;
+}
+/* line 38, ../scss/public.scss */
+table#tab_ressources th:nth-child(3) {
+  width: 320px;
+}
+/* line 41, ../scss/public.scss */
+table#tab_ressources th:nth-child(4) {
+  width: 75px;
+}
+/* line 44, ../scss/public.scss */
+table#tab_ressources th:nth-child(5) {
+  width: 340px;
+}
+/* line 47, ../scss/public.scss */
+table#tab_ressources td:nth-child(1), table#tab_ressources td:nth-child(2), table#tab_ressources td:nth-child(4) {
+  text-align: center;
+}
+/* line 50, ../scss/public.scss */
+table#tab_ressources td:nth-child(4):first-line {
+  font-weight: bold;
+}
+/* line 53, ../scss/public.scss */
+table#tab_ressources td:nth-child(2) {
+  font-weight: bold;
+}
+
+/* line 57, ../scss/public.scss */
+body {
+  width: 1030px;
+  margin: auto;
+  background: url("../../../images/fond_jeu_vaisseau_navigateur_strategie_sombre.jpg") no-repeat 0px 60px black;
+}
+
+/* UTILISER SASS POUR CENTRALISER LE SKEW avec un seul paramètre */
+/* line 63, ../scss/public.scss */
+h1 {
+  transform: skewX(-15deg);
+  -webkit-transform: skewX(-15deg);
+  -o-transform: skewX(-15deg);
+  -moz-transform: skewX(-15deg);
+  -ms-transform: skewX(-15deg);
+  text-align: center;
+  /*3D*/
+  line-height: 1em;
+  color: #fff9d6;
+  font-weight: bold;
+  font-size: 48px;
+  text-shadow: 0px 0px 0 #aeaeae, 1px 1px 0 #888888, 2px 2px 0 #626262, 3px 3px 0 #3c3c3c, 4px 4px 3px rgba(0, 0, 0, 0.5), 4px 4px 1px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* line 77, ../scss/public.scss */
+.p_oblique_1 {
+  transform: skewX(15deg);
+  -webkit-transform: skewX(15deg);
+  -o-transform: skewX(15deg);
+  -moz-transform: skewX(15deg);
+  -ms-transform: skewX(15deg);
+  width: 280px;
+  line-height: 1.2em;
+  font-size: 1.1em;
+  text-align: justify;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  -webkit-border-radius: 5px 10px 5px 10px;
+  -moz-border-radius: 5px 10px 5px 10px;
+  -ms-border-radius: 5px 10px 5px 10px;
+  -o-border-radius: 5px 10px 5px 10px;
+  border-radius: 5px 10px 5px 10px;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+/* line 95, ../scss/public.scss */
+.avert_ie {
+  font-size: 2em;
+  color: red;
+  background: black;
+  position: absolute;
+  top: 0px;
+}
+
+/* line 106, ../scss/public.scss */
+header nav ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 109, ../scss/public.scss */
+header nav ul li {
+  float: left;
+  list-style-type: none;
+  height: 60px;
+  line-height: 60px;
+  width: 160px;
+  text-align: center;
+  box-sizing: border-box;
+  border: solid 2px #b9b9b9;
+  border-top: none;
+  border-left: none;
+  -webkit-border-radius: 0px 0px 4px 4px;
+  -moz-border-radius: 0px 0px 4px 4px;
+  -ms-border-radius: 0px 0px 4px 4px;
+  -o-border-radius: 0px 0px 4px 4px;
+  border-radius: 0px 0px 4px 4px;
+  background: #3a3a3a;
+}
+/* line 122, ../scss/public.scss */
+header nav ul li:hover {
+  background: #636363;
+}
+/* line 125, ../scss/public.scss */
+header nav ul li:first-child {
+  border-left: solid 2px #b9b9b9;
+}
+/* line 128, ../scss/public.scss */
+header nav ul li a {
+  width: 160px;
+  padding: 10px 20px;
+  vertical-align: middle;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.2em;
+  text-decoration: none;
+  color: white;
+}
+
+/* line 146, ../scss/public.scss */
+em {
+  font-variant: small-caps;
+  font-style: normal;
+}
+
+/* line 150, ../scss/public.scss */
+.clear {
+  clear: both;
+}
+
+/* line 153, ../scss/public.scss */
+.formule {
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+/* line 158, ../scss/public.scss */
+.formule:first-line {
+  text-decoration: underline;
+}
